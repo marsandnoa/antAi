@@ -52,14 +52,14 @@ namespace AntAi
             int score = 0;
 
             // Difference in scores
-            score += 1000 * (gameState.MyScore - gameState.OppScore);
+            score += 100 * (gameState.MyScore - gameState.OppScore);
 
             // Remaining resources
             int myPotential = EstimatePotentialResources(gameState, true);
-            int oppPotential = EstimatePotentialResources(gameState, false);
+            //int oppPotential = EstimatePotentialResources(gameState, false);
 
-            score += 50 * myPotential;
-            score -= 50 * oppPotential;
+            score += 250 * myPotential;
+            //score -= 50 * oppPotential;
 
             // Ant positions
             score += 10 * AntProximityToResources(gameState, true);
